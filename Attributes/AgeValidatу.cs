@@ -9,10 +9,8 @@ namespace Attributes
 {
     public class AgeValidatу
     {
-        /*public static bool AgeValid() 
-        {
-            //var age = Convert.ToUInt32(Console.ReadLine());
-            var person = new Person();
+        public static bool AgeValid(Person person, uint valueAttr) 
+        {            
             var type = person.GetType();
             var members = type.GetMembers();
             foreach (var member in members)
@@ -23,13 +21,11 @@ namespace Attributes
                     if (attr is AgeAttribute)
                     {
                         var temp = (AgeAttribute)attr;
-                        if (age >= temp.age) return true;
-                        else return false;
-
+                        valueAttr = temp.age;                        
                     }
                 }
             }
-            
-        }*/
+            return (person.Age >= valueAttr);
+        }
     }
 }
