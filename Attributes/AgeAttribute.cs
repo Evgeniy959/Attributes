@@ -8,7 +8,6 @@ namespace Attributes
 {
     public class AgeAttribute : Attribute
     {
-        //public uint Age { get; set; }
         public uint age;
         public AgeAttribute() {} 
         public AgeAttribute(uint age) 
